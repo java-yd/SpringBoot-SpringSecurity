@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>manager页面</title>
+</head>
+<body>
+	添加管理员<br>
+	<form   action="/manager/saveManager" method="get">
+            <table>
+                  <tr>
+                        <td>管理员账号:</td>
+                        <td><input type="text" name="username"   placeholder="请输入用户名"/></td>
+                  </tr>
+                        <tr>
+                        <td>管理员密码:</td>
+                        <td><input type="password" name="password"   placeholder="请输入密码" /></td>
+                  </tr>
+                  <tr>
+                  
+                        <td colspan="2">
+                              <button type="submit"  >去商品页</button>
+                        </td>
+                  </tr>
+            </table>
+      </form>
+	<a href="/manager/logout">退出</a>
+</body>
+</html>
