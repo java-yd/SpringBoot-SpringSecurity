@@ -49,7 +49,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         
 		
 		
-		////表单登录，permitAll()表示这个不需要验证 登录页面，登录失败页面
+		////表单登录，permitAll()表示这个不需要验证登录页面，登录请求，否则会报重定向次数太多
+		//loginPage:自定义登陆页面(可以直接指定静态文件或通过接口跳转页面)
+		//loginProcessingUrl:自定义登陆请求url，默认是security定义的login,在静态文件action中填写这里配置的
 		http.formLogin().loginPage("/login.html").loginProcessingUrl("/manager/login")
 		.successHandler(myAuthenticationSuccessHandler)//登录成功后的操作
 //		.failureUrl("/manager/error")
